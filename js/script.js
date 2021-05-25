@@ -1,6 +1,40 @@
+alert("hasdkgsdjg");
 const divPage = document.querySelector(`.page`);
 createPages(1);
 paginate();
+
+const aLinks = document.querySelectorAll('.pagination li a');
+for (var j = 0; j < aLinks.length; j++) {
+    const aLink = aLinks[j];
+    aLink.addEventListener("click", function () {
+        switch (aLink.innerText) {
+            case '1':
+                createPages(1);
+                paginate();
+                break;
+            case '2':
+                createPages(2);
+                paginate();
+                break;
+            case '3':
+                createPages(3);
+                paginate();
+                break;
+            case '4':
+                createPages(4);
+                paginate();
+                break;
+            case '5':
+                createPages(5);
+                paginate();
+                break;
+            case '6':
+                createPages(6);
+                paginate();
+                break;
+        }
+    }, false);
+}
 
 function createPages(indexPage) {
     const liList = document.querySelectorAll('li');
@@ -35,36 +69,5 @@ function paginate() {
     divPage.appendChild(divButton);
 }
 
-const aLinks = document.querySelectorAll('.pagination li a');
-for (var j = 0; j < aLinks.length; j++) {
-    const aLink = aLinks[j];
-    aLink.addEventListener("click", function () {
-        switch (aLink.innerText) {
-            case '1':
-                createPages(1);
-                paginate();
-                break;
-            case '2':
-                createPages(2);
-                paginate();
-                break;
-            case '3':
-                createPages(3);
-                paginate();
-                break;
-            case '4':
-                createPages(4);
-                paginate();
-                break;
-            case '5':
-                createPages(5);
-                paginate();
-                break;
-            case '6':
-                createPages(6);
-                paginate();
-                break;
-        }
-    }, false);
-}
+
 
