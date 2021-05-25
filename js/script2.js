@@ -1,4 +1,5 @@
 const ulList = document.querySelectorAll('li');
+var ulListLength=ulList.length;
 const ul = document.querySelector('ul');
 const ulElement = document.querySelector(`.contact-list`);
 const divPage = document.querySelector(`.page`);
@@ -10,7 +11,6 @@ var falg = true;
 
 function createPages(indexPage) {
     divButton.innerHTML='';
-    // const ulList = document.querySelectorAll('li');
     const ul = document.querySelector('ul');
     // const ulElement = document.querySelector(`.contact-list`);
     ul.innerHTML = '';
@@ -18,7 +18,7 @@ function createPages(indexPage) {
     //Create 10 li in each page and append it to ul
     for (i = 0; i <= 10; i++) {
         const ul = document.querySelector('ul');
-        if ((indexPage - 1) * 10 + i < ulList.length) {
+        if ((indexPage - 1) * 10 + i < ulListLength) {
             ul.appendChild(ulList[(indexPage - 1) * 10 + i]);
         }//End-If
     }//End-For
@@ -32,7 +32,6 @@ function createPages(indexPage) {
         aElement.innerText = indexPage;
         liElement.appendChild(aElement);
         divButton.appendChild(liElement);
-
         aElement.addEventListener("click", function () {
             switch (aElement.innerText) {
                 case '1':
