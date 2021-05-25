@@ -27,7 +27,7 @@ function createPages(indexPage) {
     //Create 6 buttons in footer
     for (indexPage = 1; indexPage <= 6; indexPage++) {
         const liElement = document.createElement('li');
-        aElement = document.createElement('a');
+        const aElement = document.createElement('a');
         aElement.setAttribute('id', 'page' + indexPage);
         aElement.innerText = indexPage;
         liElement.appendChild(aElement);
